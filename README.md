@@ -23,19 +23,17 @@ Using mac or windows? kys.
 
 ## 🧩 VS Code Extensions
 
-To get syntax highlighting, real-time diagnostics, and auto-completion inside VS Code:
+To get syntax highlighting, real-time diagnostics, and auto-completion inside VS Code, Search for and install the following recommended extensions:
 
-    Search for and install the following recommended extensions:
+    VHDL (by mshr-h) – Provides language server support, syntax checking, and code navigation (VHDLS).
 
-        VHDL (by mshr-h) – Provides language server support, syntax checking, and code navigation (VHDLS).
-
-        VHDL Formatter (Optional) – Keeps your code clean and consistently styled.
+    VHDL Formatter (Optional) – Keeps your code clean and consistently styled.
 
 📁 Project Structure
 
 Organize your source files cleanly separating design entities from testbenches:
-Plaintext
 
+```bash
 your_vhdl_project/
 ├── src/
 │   ├── halfadder.vhd      # Design under test (DUT)
@@ -43,8 +41,10 @@ your_vhdl_project/
 ├── simulation/            # Auto-generated build artifacts & VCD files
 ├── simu.sh                # Automated simulation script
 └── README.md
+```
 
-⚙️ How to Run the Simulator
+
+## ⚙️ How to Run the Simulator
 
 This repository comes with an automated bash script (simu.sh) that handles compilation, elaboration, execution, and waveform generation with a single command.
 1. Make the script executable (first time only)
@@ -54,18 +54,17 @@ chmod +x simu.sh
 2. Run your simulation
 
 Pass your entity file and testbench file using the --enti and --tb flags:
-Bash
-
+```bash
 ./simu.sh --enti src/halfadder.vhd --tb src/halfadder_tb.vhd
-
+```
 The script will:
 
-    Create a simulation/ work directory.
+1. Create a simulation/ work directory.
 
-    Analyze both VHDL files using GHDL (ghdl -a).
+1. Analyze both VHDL files using GHDL (ghdl -a).
 
-    Elaborate the testbench entity (ghdl -e).
+1. Elaborate the testbench entity (ghdl -e).
 
-    Run the simulation and generate a .vcd waveform file (ghdl -r).
+1. Run the simulation and generate a .vcd waveform file (ghdl -r).
 
-    Prompt you to automatically open GTKWave to inspect your signals.
+1. Prompt you to automatically open GTKWave to inspect your signals.
