@@ -8,3 +8,15 @@ entity dff is
     );
 end;
 
+architecture behavior of dff is
+begin
+    process
+    begin
+        if(clk'event and clk = '1') then
+            q <= d;
+        else
+            q <= q;
+        end if;
+    end process;
+end;
+
