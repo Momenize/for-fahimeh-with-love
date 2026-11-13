@@ -5,20 +5,20 @@ Who would've considered?
 Before getting started, you need to install **GHDL** (the open-source VHDL compiler/simulator) and **GTKWave** (the waveform viewer).
 
 ## Linux 
-- Ubuntu / Debian:
+- ### Ubuntu / Debian:
 ```bash
 sudo apt update
 sudo apt install ghdl gtkwave
 ```
 - ### Arch
- > **You need to install [aur](https://aur.archlinux.org/) first**
+ > **You need to install [aur](https://aur.archlinux.org/) first.**
 ```bash
 sudo pacman -Syu
 yay -S ghdl
 sudo pacman -S gtkwave
 ```
 
-Using mac or windows? kys.
+###### Using mac or windows? kys.
 
 
 ## 🧩 VS Code Extensions
